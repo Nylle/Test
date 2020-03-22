@@ -7,7 +7,7 @@
     <groupId>com.github.nylle</groupId>
     <artifactId>test</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
 
     <name>KotlinFixture</name>
     <url>https://github.com/Nylle/Test</url>
@@ -143,9 +143,10 @@
                         <version>1.10.1</version>
                         <executions>
                             <execution>
-                                <phase>prepare-package</phase>
+                                <phase>pre-site</phase>
+<!--                                <phase>prepare-package</phase>-->
                                 <goals>
-                                    <goal>dokka:javadocJar</goal>
+                                    <goal>javadocJar</goal>
                                 </goals>
                             </execution>
                         </executions>
