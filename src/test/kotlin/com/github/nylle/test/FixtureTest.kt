@@ -1,7 +1,7 @@
-package com.github.nylle.kotlinfixture
+package com.github.nylle.test
 
-import com.github.nylle.kotlinfixture.testobjects.TestObjectGeneric
-import com.github.nylle.kotlinfixture.testobjects.TestObjectWithGenericConstructor
+import com.github.nylle.test.testobjects.TestObjectGeneric
+import com.github.nylle.test.testobjects.TestObjectWithGenericConstructor
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import java.util.Optional

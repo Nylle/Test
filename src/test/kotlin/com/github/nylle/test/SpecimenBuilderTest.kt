@@ -1,9 +1,9 @@
-package com.github.nylle.kotlinfixture
+package com.github.nylle.test
 
 import com.github.nylle.javafixture.Configuration.configure
 import com.github.nylle.javafixture.SpecimenType
 import com.github.nylle.javafixture.SpecimenType.fromClass
-import com.github.nylle.kotlinfixture.testobjects.TestObjectGeneric
+import com.github.nylle.test.testobjects.TestObjectGeneric
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import java.util.Optional

@@ -1,7 +1,6 @@
-package com.github.nylle.kotlinfixture
+package com.github.nylle.test
 
 import com.github.nylle.javafixture.ISpecimenBuilder
-import java.util.function.Consumer
 import kotlin.streams.asSequence
 
 class SpecimenBuilder<T> (private val builder: ISpecimenBuilder<T>) {

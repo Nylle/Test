@@ -1,4 +1,4 @@
-package com.github.nylle.kotlinfixture.testobjects;
+package com.github.nylle.test.testobjects;
 
 public interface ITestGeneric<T, U> {
     int publicField = 1;

@@ -1,4 +1,4 @@
-package com.github.nylle.kotlinfixture
+package com.github.nylle.test
 
 import com.github.nylle.javafixture.Configuration
 import com.github.nylle.javafixture.Fixture
