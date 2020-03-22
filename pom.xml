@@ -7,7 +7,7 @@
     <groupId>com.github.nylle</groupId>
     <artifactId>test</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
 
     <name>KotlinFixture</name>
     <url>https://github.com/Nylle/Test</url>
@@ -138,14 +138,14 @@
 
                     <!-- Javadoc plugin -->
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.1.0</version>
+                        <groupId>org.jetbrains.dokka</groupId>
+                        <artifactId>dokka-maven-plugin</artifactId>
+                        <version>1.10.1</version>
                         <executions>
                             <execution>
-                                <id>attach-javadocs</id>
+                                <phase>pre-site</phase>
                                 <goals>
-                                    <goal>jar</goal>
+                                    <goal>dokka:javadocJar</goal>
                                 </goals>
                             </execution>
                         </executions>
@@ -206,4 +206,12 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>https://jcenter.bintray.com/</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
