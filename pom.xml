@@ -7,7 +7,7 @@
     <groupId>com.github.nylle</groupId>
     <artifactId>test</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.11</version>
+    <version>0.0.12</version>
 
     <name>KotlinFixture</name>
     <url>https://github.com/Nylle/Test</url>
@@ -54,6 +54,12 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test-junit</artifactId>
             <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.5.1</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
