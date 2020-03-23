@@ -7,7 +7,7 @@
     <groupId>com.github.nylle</groupId>
     <artifactId>test</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.12</version>
+    <version>0.0.13</version>
 
     <name>KotlinFixture</name>
     <url>https://github.com/Nylle/Test</url>
@@ -99,12 +99,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.0</version>
-                <configuration>
-                    <argLine>
-                        --illegal-access=permit
-                    </argLine>
-                </configuration>
+                <version>2.21.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.2.0</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <!-- Nexus Staging Plugin -->
             <plugin>
