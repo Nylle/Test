@@ -14,6 +14,12 @@ jobs:
         with:
           java-version: 11
 
+      - name: Maven Package
+        run: mvn -B clean package -DskipTests
+
+      - name: Maven Verify
+        run: mvn -B clean verify
+
       - name: Release Maven package
         uses: samuelmeuli/action-maven-publish@v1
         with:
@@ -21,3 +27,4 @@ jobs:
           gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
           nexus_username: ${{ secrets.SONATYPE_USERNAME }}
           nexus_password: ${{ secrets.SONATYPE_PASSWORD }}
+          maven_args: -DskipTests
