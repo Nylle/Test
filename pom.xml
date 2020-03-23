@@ -7,7 +7,7 @@
     <groupId>com.github.nylle</groupId>
     <artifactId>test</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.8</version>
+    <version>0.0.9</version>
 
     <name>KotlinFixture</name>
     <url>https://github.com/Nylle/Test</url>
@@ -209,11 +209,6 @@
     </licenses>
 
     <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <name>Maven Plugin Repository</name>
-            <url>http://repo1.maven.org/maven2</url>
-        </pluginRepository>
         <pluginRepository>
             <id>jcenter</id>
             <name>JCenter</name>
