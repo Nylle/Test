@@ -7,7 +7,7 @@
     <groupId>com.github.nylle</groupId>
     <artifactId>test</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.16</version>
+    <version>0.1.0</version>
 
     <name>Dokka-Test</name>
     <url>https://github.com/Nylle/Test</url>
