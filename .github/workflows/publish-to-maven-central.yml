@@ -1,8 +1,11 @@
 name: release
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - '**'
+#    tags:
+#      - '*'
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -23,7 +26,9 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: ${{ github.event.head_commit.message }}
+          body: |
+            ## What's changed?
+            ${{ github.event.head_commit.message }}
           draft: false
           prerelease: false
 
