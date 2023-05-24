@@ -26,10 +26,17 @@ jobs:
           release_name: ${{ github.ref }}
           body: |
             ## What's changed?
-              ${{ github.event.head_commit.message }}
+              $(git tag -l --sort=-taggerdate --format='%(contents)' $(git describe --tags $(git branch --show-current)) | grep . | while read line; do echo "- $line"; done)
           draft: false
           prerelease: false
-
+          
+          # https://stackoverflow.com/questions/65606498/how-to-access-github-tag-message-in-github-actions
+          # https://stackoverflow.com/questions/72200924/github-action-prints-commit-message-instead-of-tag-message
+          # https://serverfault.com/questions/252921/how-to-remove-empty-blank-lines-from-a-file-in-unix-including-spaces
+          # https://serverfault.com/questions/72744/command-to-prepend-string-to-each-line
+          # git tag -a 1.0.4 -m "BREAKING: 1" -m "Fix: 2" -m "Feat: 3"
+          
+          
 #      - name: Release Maven package
 #        uses: samuelmeuli/action-maven-publish@v1
 #        with:
