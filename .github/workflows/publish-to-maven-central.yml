@@ -16,18 +16,20 @@ jobs:
         with:
           java-version: 11
 
+      - name: Create Release Message
+        run: |
+          echo "## What's changed?" > release.txt
+          echo git tag -l --sort=-taggerdate --format='%(contents)' $(git describe --tags $(git branch --show-current)) | grep . | while read line; do echo "- $line"; done >> release.txt
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-          RELEASE_MESSAGE: $(git tag -l --sort=-taggerdate --format='%(contents)' $(git describe --tags $(git branch --show-current)) | grep . | while read line; do echo "- $line"; done)
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: |
-            ## What's changed?
-              $RELEASE_MESSAGE
+          body_path: release.txt
           draft: false
           prerelease: false
           
